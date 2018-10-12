@@ -1,11 +1,99 @@
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="Shot-penguin!">
+	<meta name="keywords" content="Shot-penguin!">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<title>Shot-penguin!</title>
+	<link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+	
 </head>
-<body>
-    <h2>Hello </h2>
+
+<body onload="init()">
+
+	<audio class="whack-sound" src="strzał.mp3"></audio>
+	<audio class="intro" src="intro.mp3"></audio>
+
+	<h1>Shot-penguin! <span class="score">0</span></h1>
+	<h1>Hello!  <span class="type"></span></h1>
+
+	<div class="new-game"><div class="outer"><div class="height"><div class="inner">Start Game</div></div></div></div>
+	
+	<div class="modal-content modal">
+		<div class="modal-header">
+			<h2>Give your name</h2>
+		</div>
+		<div class="modal-body">
+			<input type="text" class="player-name" maxlength="20" autofocus>
+		</div>
+		<div class="modal-footer">
+			<button class="start btn">Start!</button>
+			<button class="exit btn">Exit </button>
+		</div>
+	</div>
+
+	<div class="modal-content-two modal">
+		<div class="modal-header-two">
+			<h2>Your score</h2>
+		</div>
+		<div class="modal-body-two">
+			<p class="result"></p>
+		</div>
+		<div class="modal-footer-two">
+			<button class="more btn">again!</button>
+			<button class="save btn" onclick="resultsDisplay(), saveOnClick()">Save score</button>
+			<button class="exit btn">Exit</button>
+		</div>
+	</div>
+
+	<div class="modal-content-results modal">
+		<div class="modal-header-results">
+			<h2>Score</h2>
+		</div>
+		<div class="modal-body-results" style="overflow-y:auto; height: 60vh;">
+			<table class="results-table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Score</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+		<div class="modal-footer-results">
+			<button class="new-game-results btn">New game</button>
+			<button class="exit btn">Exit</button>
+		</div>
+	</div>
+
+	<div class="game">
+		<div class="cloud cloud1">
+			<div class="pinguin"></div>
+		</div>
+		<div class="cloud cloud2">
+			<div class="pinguin"></div>
+		</div>
+		<div class="cloud cloud3">
+			<div class="pinguin"></div>
+		</div>
+		<div class="cloud cloud4">
+			<div class="pinguin"></div>
+		</div>
+		<div class="cloud cloud5">
+			<div class="pinguin"></div>
+		</div>
+		<div class="cloud cloud6">
+			<div class="pinguin"></div>
+		</div>
+	</div>
+
+<script src="js/app.js"></script>
+
 </body>
+		
 </html>
